@@ -1,0 +1,37 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Event",
+                "referenceId": "Event_1"
+            },
+            "WhoId": "@Contact_1",
+            "StartDateTime": "2018-07-30",
+            "EndDateTime": "2018-07-30",
+            "IsAllDayEvent":"true",
+            "Subject": "Call Donor"
+        },
+        {
+            "attributes": {
+                "type": "Event",
+                "referenceId": "Event_2"
+            },
+            "WhoId": "@Contact_2",
+            "StartDateTime": "2018-07-31",
+            "EndDateTime": "2018-07-31",
+            "IsAllDayEvent":"true",
+            "Subject": "Email payment remainder"
+        },
+        {
+            "attributes": {
+                "type": "Event",
+                "referenceId": "Event_3"
+            },
+            "WhoId": "@Contact_3",
+            "StartDateTime": "2018-08-01",
+            "EndDateTime": "2018-08-01",
+            "IsAllDayEvent":"true",
+            "Subject": "Change membership status"
+        }
+    ]
+}

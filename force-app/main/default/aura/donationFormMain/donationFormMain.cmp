@@ -1,0 +1,96 @@
+<aura:component controller="DonationFormController" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="Contact" name="theContact" default="{'sobjectType': 'Contact'}"
+        description="The contact for the individual submitting the donation"/>
+    <aura:attribute type="Opportunity" name="theDonation" default="{'sobjectType': 'Opportunity', 'Is_Monthly__c': 'false'}"
+        description="The opportunity representing the donation being submitted"/>
+    <aura:attribute type="Map" name="thePaymentMethod" default="{}"
+        description="The model for the payment method being submitted (includes cardType, cardNumber, cardCVV, cardExpMonth, cardExpYear)"/>
+    <aura:attribute type="Id" name="selectedProductId" description="Get selected product"/>
+    <aura:attribute type="Product2" name="selectedProduct" description="The selected product"/>
+    <aura:attribute type="Map" name="shippingAddressModel" default="{'useCustomShippingAddress' : false}"
+        description="The model for the shipping address for donations with gifts (includes street, city, state, postalCode, and useCustomShippingAddress"/>
+    
+    <!-- these values are set by the lightning app builder -->
+    <aura:attribute name="heading" type="String" default="Help keep your favorite programming on the air!"/>
+    <aura:attribute name="subHeading" type="String"
+        default="Your tax-deductible membership support is crucial to maintain quality public broadcasting in Northern California"/>
+    <aura:attribute name="customOneTimeAskString" type="String" />
+    <aura:attribute name="customMonthlyAskString" type="String" />
+    <aura:attribute name="defaultOneTimeButtonIndex" type="Integer" default="3"/>
+    <aura:attribute name="defaultMonthlyButtonIndex" type="Integer" default="2"/>
+    <aura:attribute name="defaultIsMonthly" type="String" default="false"/>
+    <aura:attribute name="donateButtonDisabled" type="Boolean" default="false"/>
+
+    <aura:registerEvent name="errorEvent" type="c:donationFormErrorEvent"/>
+ 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="submitButtonClickEvent" event="c:submitButtonEvent" action="{!c.reviewDonation}"/>
+    <aura:handler name="donationFormCheckoutEvent" event="c:donationFormCheckoutEvent" action="{!c.submit}"/>
+    <aura:handler name="productTileSelectionEvent" event="c:productTileSelectionEvent" action="{!c.handleProductSelectionEvent}" />
+    <aura:method name="reviewDonation_Test" action="{!c.reviewDonation}"/>
+    <aura:method name="submit_Test" action="{!c.submit}"/>
+
+    <div class="backgroundImg">
+        <lightning:layout class="qHeader">
+            <lightning:layoutItem class="slds-show_medium" size="1"></lightning:layoutItem>
+            <lightning:layoutItem class="qMasthead" size="12" smallDeviceSize="11">
+                <img src="{!$Resource.formHeaderLogo}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout class="container" multipleRows="true">
+            <lightning:layoutItem class="slds-show_medium" size="1"></lightning:layoutItem>
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="11">
+                <h1>{!v.heading}</h1>
+                <p>{!v.subHeading}</p>
+            </lightning:layoutItem>
+            <c:donationFormError aura:id="errorBox"/>
+            <lightning:layoutItem class="slds-show_medium" size="1"></lightning:layoutItem>
+            <lightning:layoutItem aura:id="theForm" class="formBody slds-m-top_small" size="12" smallDeviceSize="12" mediumDeviceSize="8" largeDeviceSize="8">
+                <c:donationFormDonation aura:id="donate"
+                                        donation="{!v.theDonation}"
+                                        customMonthlyAskString="{!v.customMonthlyAskString}"
+                                        customOneTimeAskString="{!v.customOneTimeAskString}"
+                                        defaultOneTimeButtonIndex="{!v.defaultOneTimeButtonIndex}"
+                                        defaultMonthlyButtonIndex="{!v.defaultMonthlyButtonIndex}"/>
+                <h2 class="slds-text-heading_medium slds-m-top_large slds-p-left_small slds-show_small">Contact Information</h2>
+                <c:donationFormContact aura:id="contact"
+                                    theContact="{!v.theContact}"/>
+                <h2 class="slds-text-heading_medium slds-m-top_large slds-p-left_small slds-show_small">Payment Information</h2>
+                <c:donationFormPayment aura:id="payment"
+                                    thePaymentMethod="{!v.thePaymentMethod}"/>
+                <h2 class="slds-text-heading_medium slds-m-top_large slds-p-left_small slds-show_small">Billing Address</h2>
+                <c:donationFormAddress aura:id="address"
+                                        street="{!v.theContact.MailingStreet}"
+                                        city="{!v.theContact.MailingCity}"
+                                        state="{!v.theContact.MailingState}"
+                                        postalCode="{!v.theContact.MailingPostalCode}"/>
+                <div class="slds-m-top_small slds-p-around_small">
+                    <aura:if isTrue="{!!$Browser.isPhone}">
+                        <c:donationFormProductTilesWrapper aura:id="productsWrapper"
+                                                        selectedProductId="{!v.selectedProductId}"
+                                                        shippingAddressModel="{!v.shippingAddressModel}"
+                                                        defaultAmount="{!v.theDonation.Initial_Payment_Amount__c}"
+                                                        defaultIsMonthly="{!v.theDonation.Is_Monthly__c}"/>
+                    </aura:if>
+                </div>
+                <div class="slds-form-element__control slds-align_absolute-center slds-p-top_medium slds-p-bottom_medium">
+                    <c:donationFormSubmitButton aura:id="submit" donateButtonDisabled="{!v.donateButtonDisabled}"/>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout class="qFooter" multipleRows="true">
+            <lightning:layoutItem class="slds-show_medium" size="1"></lightning:layoutItem>
+            <lightning:layoutItem size="12" mediumDeviceSize="4" largeDeviceSize="2">
+                <p><img src="{!$Resource.formFooterLogo}" alt="KQED footer logo"/></p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="12" mediumDeviceSize="5" largeDeviceSize="9" class="qFooterLinks">
+                <p><b>Copyright © 2018 KQED Inc. All Rights Reserved. |
+                    <a onclick="{!c.termsOfService}">Terms of Service | </a>
+                    <a onclick="{!c.privacyPolicy}">Privacy Policy | </a>
+                    <a onclick="{!c.contactUs}">Contact Us</a></b>
+                </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <div aura:id="modalPlaceholder"></div>
+    </div>
+</aura:component>

@@ -1,0 +1,28 @@
+{
+    "orgName": "KQED",
+    "edition": "Enterprise",
+    "hasSampleData": "false",
+    "features": ["Communities"],
+    "settings": {
+        "orgPreferenceSettings" : {
+            "s1DesktopEnabled": true,
+            "chatterEnabled": true,
+            "socialProfilesEnable": true,
+            "networksEnabled": true,
+            "s1OfflinePref": true,
+            "offlineDraftsEnabled": true,
+            "enhancedEmailEnabled": true,
+            "selfSetPasswordInApi": true,
+            "analyticsSharingEnable": true,
+            "s1EncryptedStoragePref2": false,
+            "eventLogWaveIntegEnabled": false,
+            "sendThroughGmailPref": false,
+            "loginForensicsEnabled": false,
+            "pathAssistantsEnabled": false,
+            "translation": false,
+            "disableParallelApexTesting": false,
+            "voiceEnabled": false,
+            "notesReservedPref01": false
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Annualized_Donation_Value__c</fullName>
+    <externalId>false</externalId>
+    <formula>Sum_One_Time_Last_Year_Donations__c +   Sum_Annualized_Sustaining_Donations__c + Sum_Inactive_Last_Year_Donations__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The sum total of all donations from this Contact in the last year</inlineHelpText>
+    <label>Total Annualized Donation Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

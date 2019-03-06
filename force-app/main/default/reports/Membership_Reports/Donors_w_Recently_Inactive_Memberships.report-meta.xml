@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.Opportunities__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Opportunities__r$Total_Approved_Payments__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunities__r$Actual_End_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contact.Opportunities__r$Is_Monthly__c</field>
+    </columns>
+    <description>Inactive Donors whose memberships have expired within the past 30 days</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$Membership_Tier__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>None</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Opportunities__r$Actual_End_Date__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:30</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Donors w/ Recently Inactive Memberships</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contacts_with_Opportunities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact$Birthdate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Donations</fullName>
+    <columns>Cancel_Date__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Initial_Payment_Amount__c</columns>
+    <columns>Cancel_Reason__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>End_Reason__c</field>
+        <operation>equals</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>Cancelled Donations</label>
+</ListView>

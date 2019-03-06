@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Verified</fullName>
+        <default>false</default>
+        <label>Verified</label>
+    </customValue>
+    <customValue>
+        <fullName>Partially Verified</fullName>
+        <default>false</default>
+        <label>Partially Verified</label>
+    </customValue>
+    <customValue>
+        <fullName>Unverified</fullName>
+        <default>false</default>
+        <label>Unverified</label>
+    </customValue>
+    <masterLabel>Address Verification Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

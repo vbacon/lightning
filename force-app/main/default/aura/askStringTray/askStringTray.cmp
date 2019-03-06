@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:attribute name="donation" type="Opportunity" required="true"/>
+    <aura:attribute type="Decimal[]" name="valueOptions" default="[]"/>
+    <aura:attribute type="Integer" name="defaultIndex" required="true"/>
+    
+    <aura:method name="setDefaultValue" action="{!c.setDefaultValue}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.setDefaultValue}"/>
+
+    <lightning:layout multipleRows="true" class="slds-p-around_small">
+        <aura:iteration items="{!v.valueOptions}" var="item">
+            <c:askStringButton aura:id="askStringButton" donation="{!v.donation}" askStringAmount="{!item}" />
+        </aura:iteration>
+    </lightning:layout>
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Date a payment was processed by Worldpay (if blank, transaction has not yet occurred)</inlineHelpText>
+    <label>Post Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

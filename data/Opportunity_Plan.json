@@ -1,0 +1,20 @@
+[
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Donors/Donors1.json"
+        ]
+    },
+    {
+        "sobject": "Opportunity",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Opportunities/Active_SP_1.json",
+            "Opportunities/Active_Monthly.json"
+        ]
+    }
+
+]

@@ -1,0 +1,10 @@
+.THIS.btn-submit {
+    background-color: rgb(255,70,0);
+    padding: 10px;
+}
+
+.THIS.btn-submit p {
+    font-family: Arial;
+    font-size: 24px;
+    color: white;
+}

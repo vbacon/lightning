@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Passing selected product id">
+    <aura:attribute name="productTileSelected" type="Id" description="Selected values" access="global" />
+    <aura:attribute name="productSelected" type="Product2" description="Selected Product" access="global" />
+</aura:event>
+

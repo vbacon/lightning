@@ -1,0 +1,94 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField1"
+            },
+            "Product_Order_Template__c" : "@ForestTemplate", 
+            "Field_Name__c": "Opp Product: Id",
+            "Field_Order__c": 1
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField2"
+            },
+            "Product_Order_Template__c" : "@ForestTemplate", 
+            "Field_Name__c": "Opp Product: Name",
+            "Field_Order__c": 2
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField3"
+            },
+            "Product_Order_Template__c" : "@ForestTemplate", 
+            "Field_Name__c": "Opp Product: ProductCode",
+            "Field_Order__c": 3
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField4"
+            },
+            "Product_Order_Template__c" : "@ForestTemplate", 
+            "Field_Name__c": "Opp Product: Quantity",
+            "Field_Order__c": 4
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField5"
+            },
+            "Product_Order_Template__c" : "@ForestTemplate", 
+            "Field_Name__c": "Opp Product: Date",
+            "Field_Order__c": 5
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField6"
+            },
+            "Product_Order_Template__c" : "@EssentialTemplate", 
+            "Field_Name__c": "Contact: First Name",
+            "Field_Order__c": 1
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField7"
+            },
+            "Product_Order_Template__c" : "@EssentialTemplate", 
+            "Field_Name__c": "Contact: Last Name",
+            "Field_Order__c": 2
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField8"
+            },
+            "Product_Order_Template__c" : "@EssentialTemplate", 
+            "Field_Name__c": "Product: Type",
+            "Field_Order__c": 3
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField9"
+            },
+            "Product_Order_Template__c" : "@EssentialTemplate", 
+            "Field_Name__c": "Product: Cost",
+            "Field_Order__c": 4
+        },
+        {
+            "attributes": {
+                "type": "Product_Template_Field__c",
+                "referenceId": "ProductTemplateField10"
+            },
+            "Product_Order_Template__c" : "@EssentialTemplate", 
+            "Field_Name__c": "Product: Product Code",
+            "Field_Order__c": 5
+        }
+    ]
+}

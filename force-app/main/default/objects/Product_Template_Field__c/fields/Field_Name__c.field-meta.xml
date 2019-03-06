@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Name__c</fullName>
+    <description>This is the list of the fields that one can pick from in order to create a template.
+
+NOTE: The picklist values in this field must be kept in sync with the Field Name values in the custom metadata type named Product Template Name Map.</description>
+    <externalId>false</externalId>
+    <label>Field Name</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Opp Product: Id</fullName>
+                <default>false</default>
+                <label>Opp Product: Id</label>
+            </value>
+            <value>
+                <fullName>Opp Product: Name</fullName>
+                <default>false</default>
+                <label>Opp Product: Name</label>
+            </value>
+            <value>
+                <fullName>Opp Product: ProductCode</fullName>
+                <default>false</default>
+                <label>Opp Product: ProductCode</label>
+            </value>
+            <value>
+                <fullName>Opp Product: Quantity</fullName>
+                <default>false</default>
+                <label>Opp Product: Quantity</label>
+            </value>
+            <value>
+                <fullName>Opp Product: Date</fullName>
+                <default>false</default>
+                <label>Opp Product: Date</label>
+            </value>
+            <value>
+                <fullName>Opp Product: Created Date</fullName>
+                <default>false</default>
+                <label>Opp Product: Created Date</label>
+            </value>
+            <value>
+                <fullName>Opp Product: Last Mod Date</fullName>
+                <default>false</default>
+                <label>Opp Product: Last Mod Date</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Shipping Street</fullName>
+                <default>false</default>
+                <label>Opportunity: Shipping Street</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Shipping City</fullName>
+                <default>false</default>
+                <label>Opportunity: Shipping City</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Shipping State</fullName>
+                <default>false</default>
+                <label>Opportunity: Shipping State</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Shipping Postal Code</fullName>
+                <default>false</default>
+                <label>Opportunity: Shipping Postal Code</label>
+            </value>
+            <value>
+                <fullName>Contact: First Name</fullName>
+                <default>false</default>
+                <label>Contact: First Name</label>
+            </value>
+            <value>
+                <fullName>Contact: Last Name</fullName>
+                <default>false</default>
+                <label>Contact: Last Name</label>
+            </value>
+            <value>
+                <fullName>Contact: Email</fullName>
+                <default>false</default>
+                <label>Contact: Email</label>
+            </value>
+            <value>
+                <fullName>Product: Id</fullName>
+                <default>false</default>
+                <label>Product: Id</label>
+            </value>
+            <value>
+                <fullName>Product: Available To Ship Date</fullName>
+                <default>false</default>
+                <label>Product: Available To Ship Date</label>
+            </value>
+            <value>
+                <fullName>Product: Cost</fullName>
+                <default>false</default>
+                <label>Product: Cost</label>
+            </value>
+            <value>
+                <fullName>Product: Distributor</fullName>
+                <default>false</default>
+                <label>Product: Distributor</label>
+            </value>
+            <value>
+                <fullName>Product: Estimated Ship Time</fullName>
+                <default>false</default>
+                <label>Product: Estimated Ship Time</label>
+            </value>
+            <value>
+                <fullName>Product: Generic Product</fullName>
+                <default>false</default>
+                <label>Product: Generic Product</label>
+            </value>
+            <value>
+                <fullName>Product: Product Code</fullName>
+                <default>false</default>
+                <label>Product: Product Code</label>
+            </value>
+            <value>
+                <fullName>Product: Stock Keeping Unit</fullName>
+                <default>false</default>
+                <label>Product: Stock Keeping Unit</label>
+            </value>
+            <value>
+                <fullName>Product: Shipping Method</fullName>
+                <default>false</default>
+                <label>Product: Shipping Method</label>
+            </value>
+            <value>
+                <fullName>Product: Type</fullName>
+                <default>false</default>
+                <label>Product: Type</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Id</fullName>
+                <default>false</default>
+                <label>Opportunity: Id</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Account Number</fullName>
+                <default>false</default>
+                <label>Opportunity: Account Number</label>
+            </value>
+            <value>
+                <fullName>Opportunity: Close Date</fullName>
+                <default>false</default>
+                <label>Opportunity: Close Date</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

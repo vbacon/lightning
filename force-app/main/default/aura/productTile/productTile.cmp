@@ -1,0 +1,33 @@
+<aura:component>
+    <aura:attribute name="product" type="Product2" required="true" description="The product record to display"/>
+    <aura:attribute name="displaySustainerPrice" type="Boolean" default="false" description="True if donor has selected sustained giving"/>
+    <aura:attribute name="selectedProductId"  type="Id"/>
+    <aura:attribute name="selectedProduct"  type="Product2"/>
+
+    <aura:registerEvent name="productTileSelectionEvent" type="c:productTileSelectionEvent" />
+
+    <aura:method name="productTileSelection_Test" action="{!c.selectProductTile}"/>
+
+    <div class="slds-visual-picker slds-visual-picker_medium slds-align_absolute-center">
+        <input type="radio"/>
+        <label for="card">
+
+            <span class="tilePicker slds-visual-picker__figure slds-visual-picker__icon"
+            style="{!'background:' + 'url(' + v.product.Image_URL__c + '); background-size: 100% 100%'}" onclick="{!c.selectProductTile}" >
+
+                <aura:if isTrue="{!(v.selectedProductId == v.product.Id)}">
+                    <span class="slds-m-around_small productSelect" aura:id="selectedIcon">
+                        <lightning:icon iconName="action:approval"/>
+                    </span>
+                </aura:if>
+            </span>
+
+        </label>
+    </div>
+    <span class="centered slds-p-horizontal_xx-small slds-align_absolute-center" aura:id="productName">{!v.product.Name}</span>
+    <span class="centered slds-p-horizontal_xx-small slds-m-top_xx-small tagline slds-align_absolute-center">{!v.product.Tagline__c}</span>
+    <span class="centered slds-p-horizontal_xx-small slds-m-top_xx-small slds-align_absolute-center slds-text-link productLearnMore" onclick="{!c.showProductMoreInfo}">(Learn More)</span>
+
+    <div aura:id="productTileModalPlaceholder"></div>
+
+</aura:component>

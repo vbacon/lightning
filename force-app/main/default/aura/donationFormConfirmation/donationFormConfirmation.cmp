@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="theContact" type="Contact" description="The contact that will just have been created"/>
+    <aura:attribute name="theDonation" type="Opportunity" description="The opportunity that will just have been created"/>
+    
+    <lightning:card aura:id="confirmationPage" title="{!'Thanks, ' + v.theContact.FirstName + '!'}">
+        <p>Thank you for your donation to KQED!</p>
+        <p>You will receive an email confirmation of your
+            <aura:if isTrue="{!v.theDonation.Is_Monthly__c}"> first monthly </aura:if>
+            <lightning:formattedNumber value="{!v.theDonation.Initial_Payment_Amount__c}" style="currency" currencyCode="USD" />
+            donation shortly.
+        </p>
+        <p>&nbsp;</p>
+        <lightning:button label="Return to KQED" onclick="{!c.returnToMain}"/>
+    </lightning:card>
+</aura:component>

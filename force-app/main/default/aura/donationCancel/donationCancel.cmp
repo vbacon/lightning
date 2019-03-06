@@ -1,0 +1,19 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="DonationCancelController">
+
+        <aura:attribute name="opp" type="Opportunity"/>
+        <aura:attribute name="errMsg" type="String" default=""/>
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+        <aura:if isTrue="{!v.opp != null}">
+            <aura:if isTrue="{!v.errMsg == ''}">
+                <lightning:button aura:id="authButton" label="Cancel Donation" onclick="{!c.cancel}"/>
+                <aura:set attribute="else">
+                    <ui:message severity="warning" closable="true">
+                        {!v.errMsg}
+                    </ui:message>
+                    <lightning:button aura:id="authButtonDisabled" label="Cancel Donation" disabled="true"/>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+
+</aura:component>

@@ -1,0 +1,37 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Member_Benefit__c",
+                "referenceId": "MemberCard"
+            },
+            "Name": "Member Card",
+            "Description__c": "A KQED member card that allows the user access to KQED Events"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit__c",
+                "referenceId": "KQEDProgram"
+            },
+            "Name": "KQED Program",
+            "Description__c": "A viewer guide that has a schedule of the TV shows that are on KQED's TV stations"
+        }, 
+        {
+            "attributes": {
+                "type": "Member_Benefit__c",
+                "referenceId": "PledgeFreeStream"
+            },
+            "Name": "Pledge Free Stream",
+            "Description__c": "Access to KQED's Pledge Free Stream that allows viewers to accees KQED's radio station without any pledge breaks"
+         
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit__c",
+                "referenceId": "Passport"
+            },
+            "Name": "Passport",
+            "Description__c": "Provides extended access to an on-demand library of quality public television programming online"
+        }
+    ]
+}

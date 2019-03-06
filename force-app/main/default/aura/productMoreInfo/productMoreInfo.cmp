@@ -1,0 +1,79 @@
+<aura:component>
+
+    <aura:attribute type="Product2" name="product" />
+    <aura:attribute name="displaySustainerPrice" type="Boolean" default="false" description="True if donor has selected sustained giving"/>
+
+    <!-- Unclear what this line below is for -->
+    <aura:method name="closeButton_Test" action="{!c.closeButton}"/>
+    
+    <div>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-modal_medium slds-fade-in-open">
+          <div class="slds-modal__container"> <!-- Modal with header, body and footer sections -->
+
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick="{!c.closeButton}" title="Close">
+                <lightning:icon iconName="utility:close" variant="inverse"/>
+                <span class="slds-assistive-text">Close</span>
+              </button>
+              <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Gift Details</h2>
+            </header>
+            
+            <!-- Begin Modal Body-->
+            <div class="slds-modal__content slds-p-around_medium slds-col slds-size_12-of-12 lightBlue-background" id="modal-content-id-1">
+              <div class="slds-grid">
+                <div class="slds-col slds-size_3-of-12">
+                  <span class="slds-align_absolute-center imageBoxSize"
+                    style="{!'background-image:' + 'url(' + v.product.Image_URL__c + ')'}"></span>
+                </div>          
+                <div class="slds-col slds-size_1-of-12">
+                </div>  
+                <div class="slds-col slds-size_8-of-12">
+                  <p class="slds-text-heading_medium slds-p-bottom_large">&nbsp;
+                  <span class="slds-float_right">
+                    <!-- The displaySustainerPrice is currently not being passed from the donationForm to the productTiles component, and
+                      hence not to the productTile component.  This code looks at the value in the productTile component.  However, given
+                      that this is not being passed, the value here will always be false.  Thus, the one time price is always shown.  -->
+                    <aura:if isTrue="displaySustainerPrice">
+                      <lightning:formattedNumber value="{!v.product.Sustainer_Price__c}" style="currency" currencyCode="USD" /> / Mo.
+                      <aura:set attribute="else">
+                        <lightning:formattedNumber value="{!v.product.One_Time_Price__c}" style="currency" currencyCode="USD" />
+                      </aura:set>
+                    </aura:if>  
+                  </span>  
+                  </p>
+                  <p class="slds-text-heading_large slds-p-bottom_large">{!v.product.Name}</p>
+
+                  <div class="slds-box offWhite-background">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">{!v.product.Tagline__c}</p>
+                  </div>
+                  <p>&nbsp;</p>
+                  <div class="slds-box offWhite-background restrictedHeight slds-scrollable_y">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">
+                    <aura:if isTrue="{! (v.product.Description__c.length > 0)}">
+                      <b>Description: </b>
+                      <aura:set attribute="else">
+                        No description provided.
+                      </aura:set>
+                    </aura:if>
+                    {!v.product.Description__c}</p>
+                    <p class="slds-text-heading_medium slds-p-bottom_small">
+                      <aura:if isTrue="{! (v.product.Product_Specifications__c.length > 0)}">
+                        <b>Specifications: </b>
+                      </aura:if>   
+                      {!v.product.Product_Specifications__c}</p>
+                  </div>
+                </div>
+              </div>      
+            </div>  <!-- End Modal Body -->
+            
+            <footer class="slds-modal__footer">
+              <button class="slds-button slds-button_neutral" onclick="{!c.closeButton}">Close Window</button>
+            </footer>
+
+          </div> <!-- End Modal container -->
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+      </div>
+
+</aura:component>	
+

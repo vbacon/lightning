@@ -1,0 +1,29 @@
+<aura:component>
+    <aura:attribute name="amount" type="String" />
+    <aura:attribute name="isMonthly" type="Boolean" default="false"/>
+    <aura:attribute name="donateButtonDisabled" type="Boolean" default="false"/>
+
+    <aura:registerEvent name="submitButtonClickEvent" type="c:submitButtonEvent"/>
+
+    <aura:handler event="c:donationAmountChangeEvent" action="{!c.handleSubmitButtonAmountChange}" />
+    <aura:method name="submitButton_Test" action="{!c.handleButtonClick}"/>
+
+    <button class="slds-button btn-submit" disabled="{!v.donateButtonDisabled}" onclick="{!c.handleButtonClick}">
+        <aura:if isTrue="{!v.donateButtonDisabled}">
+            <p><b><i>Submitting ...</i></b></p>
+            <aura:set attribute="else">
+                <aura:if isTrue="{!v.amount == 0}">
+                        <p><b>MAKE A GIFT!</b></p>
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.isMonthly}">
+                            <p><b>MAKE A GIFT OF ${!v.amount}/MONTH</b></p>
+                            <aura:set attribute="else">
+                                <p><b>MAKE A ${!v.amount} GIFT</b></p>
+                            </aura:set>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+            </aura:set>
+        </aura:if>
+    </button>
+</aura:component>	

@@ -1,0 +1,57 @@
+<aura:component extends="c:donationFormSegment">
+    <aura:attribute name="donation" type="Opportunity" required="true"/>
+    <aura:attribute name="donationOldValue" type="Opportunity" access="private" description="Tracks old/new val changes for change handler of js object"/>
+
+    <aura:attribute name="otherAmountInputIsValid" type="Boolean" access="private" default="true"/>
+    <aura:attribute name="donationTypeOptions" type="List" default="[{'label':'One Time', 'value': 'false' }, {'label':'Monthly', 'value': 'true' }]" access="private"/>
+    <aura:attribute name="customMonthlyAskString" type="String" default=""/>
+    <aura:attribute name="customOneTimeAskString" type="String" default=""/>
+    <aura:attribute name="defaultOneTimeButtonIndex" type="Integer" />
+    <aura:attribute name="defaultMonthlyButtonIndex" type="Integer" />
+    <aura:attribute name="monthlyAskStringValues" type="Decimal[]" default="[5, 15, 25, 50, 100]"/>
+    <aura:attribute name="oneTimeAskStringValues" type="Decimal[]" default="[40, 75, 100, 150, 250, 500]"/>
+
+    <aura:handler name="change" value="{!v.donation}" action="{!c.handleAmountChange}"/>
+    <aura:handler name="askStringSelection" event="c:askStringSelectionEvent" action="{!c.clearOtherAmount}"/>
+    <aura:registerEvent name="donationAmountChangeEvent" type="c:donationAmountChangeEvent"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:method name="custAskString_Test" action="{!c.doInit}"/>
+    
+    <div aura:id="theForm" >
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small">
+                <lightning:radioGroup class="slds-box_large"
+                    type="button"
+                    aura:id="donationTypeToggle"
+                    name="donationTypeToggle"
+                    options="{!v.donationTypeOptions}"
+                    value="{!v.donation.Is_Monthly__c}"/>
+            </lightning:layoutItem>
+        </lightning:layout>       
+        <aura:if isTrue="{!v.donation.Is_Monthly__c}">
+            <c:askStringTray aura:id="monthlyAskStringTray" donation="{!v.donation}" valueOptions="{!v.monthlyAskStringValues}" defaultIndex="{!v.defaultMonthlyButtonIndex}"/>
+            <aura:set attribute="else">
+                <c:askStringTray aura:id="oneTimeAskStringTray" donation="{!v.donation}" valueOptions="{!v.oneTimeAskStringValues}" defaultIndex="{!v.defaultOneTimeButtonIndex}"/>
+            </aura:set>
+        </aura:if>
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small" size="6" smallDeviceSize="5" mediumDeviceSize="4">
+                <div class="{!'slds-form-element' + (v.otherAmountInputIsValid ? '' : ' slds-has-error')}">
+                    <label class="slds-form-element__label">Other Amount</label>
+                    <div class="slds-form-element__control">
+                        <input class="slds-input"
+                                aura:id="otherAmountInput"
+                                type="tel"
+                                updateOn="keyup"
+                                onkeyup="{!c.setOtherAmount}"
+                                onblur="{!c.validateOtherAmountInput}"/>
+                    </div>
+                    <aura:if isTrue="{!!v.otherAmountInputIsValid}">
+                        <div class="slds-form-element__help">Please select or enter a valid amount</div>
+                    </aura:if>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

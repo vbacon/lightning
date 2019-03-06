@@ -1,0 +1,26 @@
+[
+    {
+        "sobject": "Member_Benefit__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Benefits/Member_Benefits.json"
+        ]
+    },
+    {
+        "sobject": "Member_Level__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Benefits/Member_Levels.json"
+        ]
+    },
+    {
+        "sobject": "Member_Benefit_Level__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Benefits/Member_Benefit_Levels.json"
+        ]
+    }
+]

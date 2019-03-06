@@ -1,0 +1,60 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "Case_1"
+            },
+            "ContactId": "@Contact_1",
+            "Status": "New",
+            "Origin": "Email",
+            "Subject": "Change donation from single to montly",
+            "Description": "Change donation from single to montly"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "Case_2"
+            },
+            "ContactId": "@Contact_2",
+            "Status": "On Hold",
+            "Origin": "Email",
+            "Subject": "Refund Donation",
+            "Description": "Mistakenly sent"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "Case_3"
+            },
+            "ContactId": "@Contact_3",
+            "Status": "Escalated",
+            "Origin": "Web",
+            "Subject": "Donation not successfull",
+            "Description": "Getting exception in donation form",
+            "Comments": "Dev team working on it"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "Case_4"
+            },
+            "ContactId": "@Contact_4",
+            "Status": "Closed",
+            "Origin": "Email",
+            "Subject": "Credit card update",
+            "Description": "Update new credit card number"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "Case_5"
+            },
+            "ContactId": "@Contact_5",
+            "Status": "New",
+            "Origin": "Phone",
+            "Subject": "Address Change",
+            "Description": "Address Change"
+        }
+    ]
+}

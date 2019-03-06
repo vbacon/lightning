@@ -1,0 +1,42 @@
+[
+    {
+        "sobject": "Product_Order_Template__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Premiums/ProductOrderTemplate.json"
+        ]
+    },
+    {
+        "sobject": "Product_Template_Field__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Premiums/ProductTemplateField.json"
+        ]
+    },
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Premiums/Vendor.json"
+        ]
+    },
+    {
+        "sobject": "Pricebook2",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Premiums/Pricebook2.json"
+        ]
+    },
+    {
+        "sobject": "Product2",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Premiums/Product2.json"
+        ]
+    }
+]

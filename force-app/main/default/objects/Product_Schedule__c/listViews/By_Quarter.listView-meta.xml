@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>By_Quarter</fullName>
+    <columns>NAME</columns>
+    <columns>Product__c</columns>
+    <columns>One_Time_Price__c</columns>
+    <columns>Sustainer_Price__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Quarter__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>Fiscal_Year__c</field>
+        <operation>equals</operation>
+        <value>2018</value>
+    </filters>
+    <label>By Quarter</label>
+</ListView>

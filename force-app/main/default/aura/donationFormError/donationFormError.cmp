@@ -1,0 +1,20 @@
+<aura:component>
+    <aura:attribute name="errorMsg" type="String" default="" access="private"/>
+
+    <aura:handler event="c:donationFormErrorEvent" action="{!c.handleErrorEvent}"/>
+
+    <aura:if isTrue="{!!empty(v.errorMsg)}">
+        <div class="slds-notify_container">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <span class="slds-assistive-text">error</span>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">{!v.errorMsg}</h2>
+                </div>
+                <button class="slds-button slds-button_icon slds-notify__close slds-button_icon-inverse" title="Close" onclick="{!c.closeToast}">
+                    <lightning:icon iconName="utility:close" variant="inverse" size="small"/>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

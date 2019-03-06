@@ -1,0 +1,17 @@
+<aura:component>
+  
+    <aura:attribute name="askStringAmount" type="Decimal"/>
+    <aura:attribute name="donation" type="Opportunity" required="true"/>
+    <aura:attribute name="formattedAmount" type="String" access="private"/>
+   
+    <aura:handler name="init" value="{!this}" action="{!c.formatAmount}"/>
+    <aura:method name="setDonationAmount_test" action="{!c.setDonationAmount}"/>
+    <aura:registerEvent name="askStringSelection" type="c:askStringSelectionEvent"/>
+
+    <lightning:layoutItem size="{!if(v.donation.Is_Monthly__c, 6, 4)}" mediumDeviceSize="{!if(v.donation.Is_Monthly__c, 4, 2)}">
+        <lightning:button variant="{!(v.donation.Initial_Payment_Amount__c == v.askStringAmount) ? 'brand' : 'neutral'}"
+        class="slds-m-right_x-small slds-float_left slds-m-top_x-small"
+        label="{!v.formattedAmount}"
+        onclick="{!c.setDonationAmount}"/>
+    </lightning:layoutItem>
+</aura:component>

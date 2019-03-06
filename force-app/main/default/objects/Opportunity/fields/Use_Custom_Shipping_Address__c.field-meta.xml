@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_Custom_Shipping_Address__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Did the donor select a custom Shipping Address?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked, shipping address for this donation&#39;s gift is different than the donor&#39;s billing address</inlineHelpText>
+    <label>Use Custom Shipping Address</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

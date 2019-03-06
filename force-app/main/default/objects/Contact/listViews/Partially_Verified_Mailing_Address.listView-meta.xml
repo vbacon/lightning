@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partially_Verified_Mailing_Address</fullName>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Standardized_Street_2__c</columns>
+    <columns>Standardized_City__c</columns>
+    <columns>Standardized_State__c</columns>
+    <columns>Standardized_Postal_Code__c</columns>
+    <columns>Standardized_Address_Message__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Address_Verification_Status__c</field>
+        <operation>equals</operation>
+        <value>Partially Verified</value>
+    </filters>
+    <label>Partially Verified Mailing Address</label>
+</ListView>

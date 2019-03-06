@@ -1,0 +1,45 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Member_Level__c",
+                "referenceId": "Contributor"
+            },
+            "Name": "Contributor",
+            "Member_Level_Value__c": 0
+        },
+        {
+            "attributes": {
+                "type": "Member_Level__c",
+                "referenceId": "Basic"
+            },
+            "Name": "Basic",
+            "Member_Level_Value__c": 40
+        },
+        {
+            "attributes": {
+                "type": "Member_Level__c",
+                "referenceId": "Partner"
+            },
+            "Name": "Partner",
+            "Member_Level_Value__c": 60
+        },
+        {
+            "attributes": {
+                "type": "Member_Level__c",
+                "referenceId": "LeadershipCircle"
+            },
+            "Name": "Leadership Circle",
+            "Member_Level_Value__c": 150
+        },
+        {
+            "attributes": {
+                "type": "Member_Level__c",
+                "referenceId": "MajorDonor"
+            },
+            "Name": "Major Donor",
+            "Member_Level_Value__c": 1500
+        }
+       
+    ]
+}

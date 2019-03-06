@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="products" type="Product2[]" default="[]"/>
+    <aura:attribute name="selectedProductId"  type="Id" />
+    <aura:attribute name="isMonthly" type="Boolean" required="true"/>
+
+    <lightning:layout multipleRows="true">
+        <aura:iteration items="{!v.products}" var="aProduct">
+            <lightning:layoutItem size="6" largeDeviceSize="3">
+                <c:productTile product="{!aProduct}" displaySustainerPrice="{!v.displaySustainerPrice}" aura:id="aProductTile" selectedProductId="{!v.selectedProductId}"/>
+            </lightning:layoutItem>
+        </aura:iteration>
+    </lightning:layout>
+</aura:component>

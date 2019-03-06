@@ -1,0 +1,18 @@
+.THIS.tagline {
+    color: #706e6b
+}
+
+.THIS.centered {
+    text-align: center;
+}
+.THIS .productSelect {
+    float: right;
+}
+.THIS .productLearnMore {
+    cursor: pointer;
+}
+
+.THIS .tilePicker {
+    width: 10rem;
+    height: 10rem;
+}

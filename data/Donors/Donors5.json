@@ -1,0 +1,384 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_1"
+            },
+            "Name": "Wong Household",
+            "BillingStreet": "1340 JACKSON ST",
+            "BillingCity": "OAKLAND",
+            "BillingState": "CA",
+            "BillingPostalCode": "94612",
+            "Standardized_Street_2__c": "1340 JACKSON ST",
+            "Standardized_City__c": "OAKLAND",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94612-4008",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_1"
+                        },
+                        "FirstName": "Cathy",
+                        "LastName": "Wong",
+                        "Email": "cwong@test.testtest",
+                        "MailingStreet": "1340 JACKSON ST",
+                        "MailingCity": "OAKLAND",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94612",
+                        "Standardized_City__c": "OAKLAND",
+                        "Standardized_Postal_Code__c": "94612-4008",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "1340 JACKSON ST",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_2"
+            },
+            "Name": "Patrick Household",
+            "BillingStreet": "2249 SHORELINE DR",
+            "BillingCity": "ALAMEDA",
+            "BillingState": "CA",
+            "BillingPostalCode": "94501",
+            "Standardized_Street_2__c": "2249 SHORELINE DR",
+            "Standardized_City__c": "ALAMEDA",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94501-6227",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_2"
+                        },
+                        "FirstName": "Clara",
+                        "LastName": "Patrick",
+                        "Email": "cpatrick@test.testtest",
+                        "MailingStreet": "2249 SHORELINE DR",
+                        "MailingCity": "ALAMEDA",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94501",
+                        "Standardized_City__c": "ALAMEDA",
+                        "Standardized_Postal_Code__c": "94501-6227",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "2249 SHORELINE DR",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_3"
+            },
+            "Name": "Warner Household",
+            "BillingStreet": "4524 TELEGRAPH AVE",
+            "BillingCity": "OAKLAND",
+            "BillingState": "CA",
+            "BillingPostalCode": "94609",
+            "Standardized_Street_2__c": "4524 TELEGRAPH AVE",
+            "Standardized_City__c": "OAKLAND",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94609-2020",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_3"
+                        },
+                        "FirstName": "Celia",
+                        "LastName": "Warner",
+                        "Email": "cwarner@test.testtest",
+                        "MailingStreet": "4524 TELEGRAPH AVE",
+                        "MailingCity": "OAKLAND",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94609",
+                        "Standardized_City__c": "OAKLAND",
+                        "Standardized_Postal_Code__c": "94609-2020",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "4524 TELEGRAPH AVE",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_4"
+            },
+            "Name": "Castillo Household",
+            "BillingStreet": "1340 Jackson St",
+            "BillingCity": "Oakland",
+            "BillingState": "CA",
+            "BillingPostalCode": "94612",
+            "Standardized_Street_2__c": "1340 JACKSON ST",
+            "Standardized_City__c": "OAKLAND",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94612-4008",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_4"
+                        },
+                        "FirstName": "Sabrina",
+                        "LastName": "Castillo",
+                        "Email": "scastillo@test.testtest",
+                        "MailingStreet": "1340 Jackson St",
+                        "MailingCity": "Oakland",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94612",
+                        "Standardized_City__c": "OAKLAND",
+                        "Standardized_Postal_Code__c": "94612-4008",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "1340 JACKSON ST",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_5"
+            },
+            "Name": "Taylor Household",
+            "BillingStreet": "117 Park Rd 103",
+            "BillingCity": "Burlingame",
+            "BillingState": "CA",
+            "BillingPostalCode": "94010",
+            "Standardized_Street_2__c": "117 PARK RD APT 103",
+            "Standardized_City__c": "BURLINGAME",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94010-4306",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_5"
+                        },
+                        "FirstName": "Henrietta",
+                        "LastName": "Taylor",
+                        "Email": "htaylor@test.testtest",
+                        "MailingStreet": "117 Park Rd 103",
+                        "MailingCity": "Burlingame",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94010",
+                        "Standardized_City__c": "BURLINGAME",
+                        "Standardized_Postal_Code__c": "94010-4306",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "117 PARK RD APT 103",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_6"
+            },
+            "Name": "Newton Household",
+            "BillingStreet": "597 El Camino Real",
+            "BillingCity": "South San Francisco",
+            "BillingState": "CA",
+            "BillingPostalCode": "94080",
+            "Standardized_Street_2__c": "597 EL CAMINO REAL",
+            "Standardized_City__c": "S SAN FRAN",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94080-4402",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_6"
+                        },
+                        "FirstName": "Ignacio",
+                        "LastName": "Newton",
+                        "Email": "inewton@test.testtest",
+                        "MailingStreet": "597 El Camino Real",
+                        "MailingCity": "South San Francisco",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94080",
+                        "Standardized_City__c": "S SAN FRAN",
+                        "Standardized_Postal_Code__c": "94080-4402",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "597 EL CAMINO REAL",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_7"
+            },
+            "Name": "Scott Household",
+            "BillingStreet": "1188 SAN PABLO AVE",
+            "BillingCity": "BERKELEY",
+            "BillingState": "CA",
+            "BillingPostalCode": "94706",
+            "Standardized_Street_2__c": "1188 SAN PABLO AVE",
+            "Standardized_City__c": "ALBANY",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94706-2245",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_7"
+                        },
+                        "FirstName": "Kirk",
+                        "LastName": "Scott",
+                        "Email": "kscott@test.testtest",
+                        "MailingStreet": "1188 SAN PABLO AVE",
+                        "MailingCity": "BERKELEY",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94706",
+                        "Standardized_City__c": "ALBANY",
+                        "Standardized_Postal_Code__c": "94706-2245",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "1188 SAN PABLO AVE",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_8"
+            },
+            "Name": "Mcgee Household",
+            "BillingStreet": "2530 E 12TH ST",
+            "BillingCity": "OAKLAND",
+            "BillingState": "CA",
+            "BillingPostalCode": "94601",
+            "Standardized_Street_2__c": "2530 E 12TH ST",
+            "Standardized_City__c": "OAKLAND",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94601-1502",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_8"
+                        },
+                        "FirstName": "Alfredo",
+                        "LastName": "Mcgee",
+                        "Email": "amcgee@test.testtest",
+                        "MailingStreet": "2530 E 12TH ST",
+                        "MailingCity": "OAKLAND",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94601",
+                        "Standardized_City__c": "OAKLAND",
+                        "Standardized_Postal_Code__c": "94601-1502",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "2530 E 12TH ST",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_9"
+            },
+            "Name": "Houston Household",
+            "BillingStreet": "597 ELCAMINO REAL",
+            "BillingCity": "SOUTH SAN FRANCISCO",
+            "BillingState": "CA",
+            "BillingPostalCode": "94080",
+            "Standardized_Street_2__c": "597 EL CAMINO REAL",
+            "Standardized_City__c": "S SAN FRAN",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94080-4402",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_9"
+                        },
+                        "FirstName": "Susie",
+                        "LastName": "Houston",
+                        "Email": "shouston@test.testtest",
+                        "MailingStreet": "597 ELCAMINO REAL",
+                        "MailingCity": "SOUTH SAN FRANCISCO",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94080",
+                        "Standardized_City__c": "S SAN FRAN",
+                        "Standardized_Postal_Code__c": "94080-4402",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "597 EL CAMINO REAL",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "Account_10"
+            },
+            "Name": "Ruiz Household",
+            "BillingStreet": "145 Monterey Rd",
+            "BillingCity": "Pacifica",
+            "BillingState": "CA",
+            "BillingPostalCode": "94044",
+            "Standardized_Street_2__c": "145 MONTEREY RD",
+            "Standardized_City__c": "PACIFICA",
+            "Standardized_State__c": "CA",
+            "Standardized_Postal_Code__c": "94044-1332",
+            "Address_Verification_Status__c": "Verified",
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "Contact_10"
+                        },
+                        "FirstName": "Gerard",
+                        "LastName": "Ruiz",
+                        "Email": "gruiz@test.testtest",
+                        "MailingStreet": "145 Monterey Rd",
+                        "MailingCity": "Pacifica",
+                        "MailingState": "CA",
+                        "MailingPostalCode": "94044",
+                        "Standardized_City__c": "PACIFICA",
+                        "Standardized_Postal_Code__c": "94044-1332",
+                        "Standardized_State__c": "CA",
+                        "Standardized_Street_2__c": "145 MONTEREY RD",
+                        "Address_Verification_Status__c": "Verified"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#3E7B49</headerColor>
+    </brand>
+    <description>App for managing donors and their donations</description>
+    <formFactors>Large</formFactors>
+    <label>Donor Management</label>
+    <navType>Standard</navType>
+    <tab>standard-Opportunity</tab>
+    <tab>standard-Account</tab>
+    <tab>standard-Contact</tab>
+    <tab>Payment__c</tab>
+    <uiType>Lightning</uiType>
+    <utilityBar>Donor_Management_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Possible_Duplicate__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, this Contact may have duplicate Contacts in the database that should be reviewed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identifies new donor as a potential duplicate of a Contact already in the system</inlineHelpText>
+    <label>Possible Duplicate</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

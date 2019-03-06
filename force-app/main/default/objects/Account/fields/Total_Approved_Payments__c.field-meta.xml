@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Approved_Payments__c</fullName>
+    <description>The sum total of all &#39;Approved&#39; Payments in all Opportunities associated with this Account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total dollar value of payments received from this Account</inlineHelpText>
+    <label>Total Approved Payments (Acct.)</label>
+    <summarizedField>Opportunity.Total_Approved_Payments__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

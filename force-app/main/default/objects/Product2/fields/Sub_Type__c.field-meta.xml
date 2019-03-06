@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DVD</fullName>
+                <default>false</default>
+                <label>DVD</label>
+            </value>
+            <value>
+                <fullName>Bluray</fullName>
+                <default>false</default>
+                <label>Bluray</label>
+            </value>
+            <value>
+                <fullName>Hardcover</fullName>
+                <default>false</default>
+                <label>Hardcover</label>
+            </value>
+            <value>
+                <fullName>Softcover</fullName>
+                <default>false</default>
+                <label>Softcover</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>CD</fullName>
+                <default>false</default>
+                <label>CD</label>
+            </value>
+            <value>
+                <fullName>Paper</fullName>
+                <default>false</default>
+                <label>Paper</label>
+            </value>
+            <value>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+                <label>Legal Services</label>
+            </value>
+            <value>
+                <fullName>Retirement Planning</fullName>
+                <default>false</default>
+                <label>Retirement Planning</label>
+            </value>
+            <value>
+                <fullName>Identity Theft Protection</fullName>
+                <default>false</default>
+                <label>Identity Theft Protection</label>
+            </value>
+            <value>
+                <fullName>Mug</fullName>
+                <default>false</default>
+                <label>Mug</label>
+            </value>
+            <value>
+                <fullName>Backpack</fullName>
+                <default>false</default>
+                <label>Backpack</label>
+            </value>
+            <value>
+                <fullName>Tote</fullName>
+                <default>false</default>
+                <label>Tote</label>
+            </value>
+            <value>
+                <fullName>T-Shirt</fullName>
+                <default>false</default>
+                <label>T-Shirt</label>
+            </value>
+            <value>
+                <fullName>Hoodie</fullName>
+                <default>false</default>
+                <label>Hoodie</label>
+            </value>
+            <value>
+                <fullName>Emergency Kit</fullName>
+                <default>false</default>
+                <label>Emergency Kit</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Newspaper</controllingFieldValue>
+            <controllingFieldValue>Audio</controllingFieldValue>
+            <controllingFieldValue>Book</controllingFieldValue>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Digital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Newspaper</controllingFieldValue>
+            <controllingFieldValue>Magazine</controllingFieldValue>
+            <valueName>Paper</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional Services</controllingFieldValue>
+            <valueName>Legal Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional Services</controllingFieldValue>
+            <valueName>Retirement Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional Services</controllingFieldValue>
+            <valueName>Identity Theft Protection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel</controllingFieldValue>
+            <valueName>T-Shirt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel</controllingFieldValue>
+            <valueName>Hoodie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Audio</controllingFieldValue>
+            <valueName>CD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Book</controllingFieldValue>
+            <valueName>Hardcover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Book</controllingFieldValue>
+            <valueName>Softcover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Household</controllingFieldValue>
+            <valueName>Mug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outdoor</controllingFieldValue>
+            <valueName>Backpack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outdoor</controllingFieldValue>
+            <valueName>Tote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Safety</controllingFieldValue>
+            <valueName>Emergency Kit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <valueName>DVD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Video</controllingFieldValue>
+            <valueName>Bluray</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

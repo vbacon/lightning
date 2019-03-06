@@ -1,0 +1,65 @@
+<aura:component controller="ProductTilesController" extends="c:donationFormSegment">
+    <aura:attribute name="allProducts" type="Map" default="{}"/>
+    <aura:attribute name="products" type="Product2[]" default="[]"/>
+    <aura:attribute name="selectedProductId" type="Id"/>
+    <aura:attribute name="shippingAddressModel" type="Map" default="{}"/>
+
+    <aura:attribute name="toggleIsValid" type="Boolean" default="true" access="private"
+        description="If false, gift toggle will show an error state and message"/>
+    <aura:attribute type="Boolean" name="showGifts" default="false"/>
+    <aura:attribute type="Boolean" name="isDisabled" default="true" access="private"/>
+    <aura:attribute type="Boolean" name="isLoading" default="false" access="private"/>
+
+    <aura:attribute type="Decimal" name="defaultAmount"/>
+    <aura:attribute type="Boolean" name="defaultIsMonthly"/>
+
+    <!-- donation attributes - private testvisible. updated by donationAmountChangeEvent -->
+    <aura:attribute type="Decimal" name="amount"/>
+    <aura:attribute type="Boolean" name="isMonthly"/>
+
+    <!-- query buffer attributes -->
+    <aura:attribute type="Integer" name="requeryDelay" access="private" default="400"/>
+    <aura:attribute type="Integer" name="timer" access="private"/>
+
+    <aura:handler name="init" value="this" action="{!c.getAllProducts}"/>
+    <aura:handler name="change" value="{!v.showGifts}" action="{!c.closeGiftToggle}"/>
+    <aura:handler name="change" value="{!v.selectedProductId}" action="{!c.evaluateToggleIsValid}"/>
+    <aura:handler event="c:donationAmountChangeEvent" action="{!c.handleDonationAmountChangeEvent}"/>
+
+    <div class="slds-form-element">
+        <label class="slds-checkbox_toggle slds-grid">
+            <span class="slds-form-element__label slds-m-bottom_none slds-m-top_xx-small">I'd like my full donation to go to KQED</span>
+            <ui:inputCheckbox class="slds-form-element__control" aura:id="toggleCheckbox"  name="checkbox" value="{!v.showGifts}" disabled="{!v.isDisabled}" />
+            <span class="slds-checkbox_faux_container">
+                <span class="{!'slds-checkbox_faux' + ((!v.toggleIsValid) ? ' slds-has-error' : '')}"></span>
+            </span>
+            <span class="slds-form-element__label slds-m-bottom_none slds-m-left_small slds-m-top_xx-small">I'd like to receive a Thank You Gift</span>
+            <aura:if isTrue="{!and(v.isDisabled,v.amount > 0)}">
+                <lightning:helptext aura:id="helpText"
+                                    content="There are no thank you gifts available for your donation"/>
+            </aura:if>
+        </label>
+        <aura:if isTrue="{!!v.toggleIsValid}">
+            <span class="slds-form-element__help slds-text-color_error" aura:id="giftToggleErrorMsg">Please select a Thank You Gift or choose "I'd like my full donation to go to KQED"</span>
+        </aura:if>
+    </div>
+    <aura:if isTrue="{!v.showGifts}">
+        <aura:if isTrue="{!!v.isLoading}">
+            <h2 class="slds-text-heading_medium slds-m-top_large slds-show_small">Select a Thank You Gift</h2>
+            <div class="slds-p-vertical_small">
+                <c:productTiles aura:id="productTiles"
+                                isMonthly="{!v.isMonthly}"
+                                products="{!v.products}"
+                                selectedProductId="{!v.selectedProductId}"/>
+            </div>
+            <aura:set attribute="else">
+                <span aura:id="loading">Loading Gifts...</span>
+            </aura:set>
+        </aura:if>
+        <aura:if isTrue="{!v.selectedProductId != null}">
+            <c:productShippingAddress aura:id="address"
+                                        useCustomShippingAddress="{!v.shippingAddressModel.useCustomShippingAddress}"
+                                        shippingAddressModel="{!v.shippingAddressModel}"/>
+        </aura:if>
+    </aura:if>
+</aura:component>

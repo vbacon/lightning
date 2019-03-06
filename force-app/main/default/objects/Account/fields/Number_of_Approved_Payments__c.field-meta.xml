@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Approved_Payments__c</fullName>
+    <description>The number of &#39;Approved&#39; Payments from Opportunities associated with this Account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of successful Payments processed from this Account</inlineHelpText>
+    <label>Number of Approved Payments (Acct.)</label>
+    <summarizedField>Opportunity.Number_of_Approved_Payments__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <type>Summary</type>
+</CustomField>

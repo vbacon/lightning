@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="amount" type="Decimal"/>
+    <aura:attribute name="isMonthly" type="String"/>
+</aura:event>

@@ -1,0 +1,17 @@
+.THIS .lightBlue-background {
+    background-color: #f2f2fa;
+}
+
+.THIS .offWhite-background {
+    background-color: #ececec;
+}
+
+.THIS .imageBoxSize {
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+
+.THIS .restrictedHeight {
+    max-height: 400px;
+}

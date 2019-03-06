@@ -1,0 +1,8 @@
+<design:component >
+    <design:attribute name="heading" label="Custom header text"  />
+    <design:attribute name="subHeading" label="Custom subheader text"  />
+    <design:attribute name="customOneTimeAskString" label="One Time Amount Options"  />
+    <design:attribute name="customMonthlyAskString" label="Monthly Amount Options"  />
+    <design:attribute name="defaultOneTimeButtonIndex" label="Default One Time Button #"  />
+    <design:attribute name="defaultMonthlyButtonIndex" label="Default Monthly Button #"  />
+</design:component>

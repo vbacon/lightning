@@ -1,0 +1,5 @@
+<aura:component extensible="true">
+    <aura:method name="validate" action="{!c.validate}" />
+    
+    {!v.body}
+</aura:component>	

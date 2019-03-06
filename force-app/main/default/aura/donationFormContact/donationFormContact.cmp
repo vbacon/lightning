@@ -1,0 +1,56 @@
+<aura:component access="global"  implements="force:appHostable,flexipage:availableForAllPageTypes" extends="c:donationFormSegment">
+    <aura:attribute name="theContact" type="Contact" access="public"/>
+  
+    <div aura:id="theForm">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="8" mediumDeviceSize="5">
+                <lightning:input label="First Name"
+                                value="{!v.theContact.FirstName}"
+                                name="firstname"
+                                maxlength="40"
+                                required="true"
+                                messageWhenPatternMismatch="Please enter valid first name"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="8" mediumDeviceSize="5">
+                <lightning:input label="Last Name"
+                                value="{!v.theContact.LastName}"
+                                name="lastname"
+                                maxlength="40"
+                                required="true"
+                                messageWhenPatternMismatch="Please enter valid last name"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="8" mediumDeviceSize="5">
+                <lightning:input label="Email"
+                                value="{!v.theContact.Email}"
+                                name="email"
+                                type="email"
+                                maxlength="40"
+                                required="true"
+                                onchange="{!c.checkDuplicateEmail}"
+                                messageWhenPatternMismatch="Please enter valid email address"/>
+            </lightning:layoutItem>
+            <aura:if isTrue="{!!$Browser.isPhone}">
+                <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="8" mediumDeviceSize="5">
+                        <c:inputDuplicate label="Re-enter your email"
+                                        aura:id="dupeInput"
+                                        name="reenter email"
+                                        type="email"
+                                        originalInput="{!v.theContact.Email}"
+                                        errorMsg="Email addresses do not match"/>
+                    
+                </lightning:layoutItem>
+            </aura:if>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="10" smallDeviceSize="8" mediumDeviceSize="5">
+                <c:inputPhone label="Phone" value="{!v.theContact.Phone}" errorMsg="Please enter valid phone number"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="2">
+                <label class="slds-form-element__label">Cell</label>
+                <lightning:input type="checkbox" name="cell" label="" value="1" />    
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>	

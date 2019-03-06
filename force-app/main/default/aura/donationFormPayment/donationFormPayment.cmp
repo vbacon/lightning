@@ -1,0 +1,76 @@
+<aura:component access="global"  implements="force:appHostable,flexipage:availableForAllPageTypes" extends="c:donationFormSegment">
+    <aura:attribute name="thePaymentMethod" type="Map" access="public" />
+    <div aura:id="theForm">
+        <lightning:layout>
+            <aura:if isTrue="{!!$Browser.isPhone}">
+                <lightning:layoutItem padding="around-small">
+                    <lightning:select name="selectItem" value="{!v.thePaymentMethod.payType}" label="Payment Type" required="true">
+                        <option value="Credit Card">Credit Card</option>
+                    </lightning:select>
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="around-small" class="img-verisign">
+                    <img src="{!$Resource.formVerisign}"/>
+                </lightning:layoutItem>
+            </aura:if>
+        </lightning:layout>
+        <lightning:layout multipleRows="true">
+            <c:inputCCNumber label="Credit Card Number"
+                            name="credit card number"
+                            value="{!v.thePaymentMethod.cardNumber}"
+                            required="true"
+                            errorMsg="Please enter valid credit card number"
+                            cardType="{!v.thePaymentMethod.cardType}"/>
+        </lightning:layout>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-small" size="6" smallDeviceSize="4">
+                <lightning:select name="selectItem" value="{!v.thePaymentMethod.cardExpMonth}" label="Expiry Month" required="true">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </lightning:select>
+            </lightning:layoutItem>
+                <lightning:layoutItem padding="around-small" size="6" smallDeviceSize="4">
+                    <lightning:select name="selectItem" value="{!v.thePaymentMethod.cardExpYear}" label="Expiry Year" required="true">
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2031">2031</option>
+                            <option value="2032">2032</option>
+                            <option value="2033">2033</option>
+                            <option value="2034">2034</option>
+                            <option value="2035">2035</option>
+                            <option value="2036">2036</option>
+                            <option value="2037">2037</option>
+                    </lightning:select>
+                </lightning:layoutItem>
+                <lightning:layoutItem padding="around-small" size="4" smallDeviceSize="2" mediumDeviceSize="2">
+                    <lightning:input label="CVV"
+                                    name="cvv"
+                                    pattern="[0-9]*"
+                                    maxlength="4"
+                                    value="{!v.thePaymentMethod.cardCVV}"
+                                    required="true"
+                                    messageWhenPatternMismatch="Please enter valid CVV"/>
+                </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

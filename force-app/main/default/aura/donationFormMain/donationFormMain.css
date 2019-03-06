@@ -1,0 +1,66 @@
+.THIS .qHeader {
+    padding-top: 24px;
+    border-bottom: 60px #737170 solid;
+    background-color: white;
+}
+
+.THIS .qMasthead img{
+    max-height: 70px;
+}
+
+.THIS .container {
+    padding-bottom: 32px;
+    overflow: auto;
+}
+
+.THIS.backgroundImg {
+    background-image: url(/resource/formBackground);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: #63a0f7;
+}
+
+.THIS h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.THIS h2 {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.THIS p {
+    font-size: medium;
+    line-height: 130%;
+}
+
+.THIS .formBody {
+    background-color: white;
+    max-width: 58rem;
+}
+
+@media (max-width: 767px) {
+    .THIS.backgroundImg {
+        background-image: none;
+    }
+    .THIS .container h1 {
+        font-size: 24px;
+        line-height: 100%;
+    }
+    .THIS .container p {
+        font-size:small;
+    }
+}
+
+.THIS .qFooter {
+    background-color: rgb(221, 221, 221);
+    padding: 10px 0 10px 0;
+}
+
+.THIS .qFooterLinks {
+    margin-top: 4px;
+}

@@ -1,0 +1,27 @@
+<aura:component>
+    <aura:attribute name="label" type="String" required="true"/>
+    <aura:attribute name="value" type="String" required="true"/>
+    <aura:attribute name="required" type="Boolean" default="false"/>
+    <aura:attribute name="errorMsg" type="String" required="true"/>
+    <aura:attribute name="pattern" type="String" required="true" default="(___) ___-____"/>
+
+    <aura:method name="validate" action="{!c.validate}"/>
+    <aura:attribute name="isValid" type="Boolean" default="true" access="private"/>
+
+    <lightning:layoutItem padding="around-small">
+        <div class="{!'slds-form-element' + (v.isValid ? '' : ' slds-has-error')}">
+            <label class="slds-form-element__label">
+                <aura:if isTrue="{!v.required}">
+                    <abbr class="slds-required" title="required">*</abbr>
+                </aura:if>
+                {!v.label}
+            </label>
+            <div class="slds-form-element__control">
+                <input class="slds-input" type="tel" aura:id="theInput" onkeyup="{!c.evaluateKeyup}" onblur="{!c.validate}" maxlength="{!v.pattern.length}"/>
+            </div>
+            <aura:if isTrue="{!!v.isValid}">
+                <div class="slds-form-element__help">{!v.errorMsg}</div>
+            </aura:if>
+        </div>
+    </lightning:layoutItem>
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_promoting_products_invalid_date</fullName>
+    <active>true</active>
+    <errorConditionFormula>End_Date__c  &lt;  Start_Date__c || End_Date__c  &lt; Today()  ||  VALUE(Fiscal_Year__c)  &lt; YEAR (TODAY())</errorConditionFormula>
+    <errorDisplayField>End_Date__c</errorDisplayField>
+    <errorMessage>Please select valid date</errorMessage>
+</ValidationRule>

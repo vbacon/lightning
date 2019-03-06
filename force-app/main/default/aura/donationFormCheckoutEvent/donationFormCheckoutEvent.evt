@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="Event fired to trigger final checkout handled by main component"/>

@@ -1,0 +1,28 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="BatchOrderCreationController">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:attribute name="vendorId" type="String"/> 
+    <aura:attribute name="hasProductOrderTemplate" type="Boolean" default="false"/>
+    <aura:attribute name="hasNewOpportunityProducts" type="Boolean" default="false"/>
+    <aura:attribute name="templateId" type="String"/>
+
+    <aura:if isTrue="{!!v.hasProductOrderTemplate}">
+        <ui:message severity="warning" closable="true">
+                This account does not have a Product Order Template assigned to it. 
+        </ui:message>
+        <lightning:button aura:id="batchOrderButtonDisabled" label="Create Batch Order" disabled="true"/>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!!v.hasNewOpportunityProducts}">
+                <ui:message severity="warning" closable="true">
+                    There are no New Opportunity Products associated with this Vendor.
+                </ui:message>
+                <lightning:button aura:id="batchOrderButtonDisabled" label="Create Batch Order" disabled="true"/>
+                <aura:set attribute="else">
+                    <lightning:button aura:id="batchOrderButton" label="Create Batch Order" onclick="{!c.createOrder}"/>
+                </aura:set>
+            </aura:if>        
+        </aura:set>
+    </aura:if>
+
+</aura:component>

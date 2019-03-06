@@ -1,0 +1,24 @@
+<aura:component>
+    <aura:attribute name="label" type="String" required="true"/>
+    <aura:attribute name="name" type="String" required="true"/>
+    <aura:attribute name="type" type="String" required="true"/>
+    <aura:attribute name="originalInput" type="String" required="true"/>
+    <aura:attribute name="errorMsg" type="String" required="true"/>
+
+    <aura:attribute name="isValid" type="Boolean" default="true"/>
+    <aura:attribute name="isPristine" type="Boolean" default="true"/>
+    <aura:method name="validate" action="{!c.validateInput}"/>
+    <aura:method name="validateFinal" action="{!c.validateFinal}"/>
+
+    <div class="{!'slds-form-element' + (v.isValid ? '' : ' slds-has-error')}">
+        <label class="slds-form-element__label">
+            <abbr class="slds-required" title="required">*</abbr>{!v.label}
+        </label>
+        <div class="slds-form-element__control">
+            <input type="{!v.type}" class="slds-input" aura:id="theInput" onblur="{!c.validateInput}" onkeyup="{!c.dirtyInput}"/>
+        </div>
+        <aura:if isTrue="{!!v.isValid}">
+            <div class="slds-form-element__help">{!v.errorMsg}</div>
+        </aura:if>
+    </div>
+</aura:component>

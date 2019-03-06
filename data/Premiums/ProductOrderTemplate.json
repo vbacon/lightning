@@ -1,0 +1,20 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Product_Order_Template__c",
+                "referenceId": "ForestTemplate"
+            },
+            "Active__c" : true, 
+            "Name": "Forest"
+        },
+        {
+            "attributes": {
+                "type": "Product_Order_Template__c",
+                "referenceId": "EssentialTemplate"
+            },
+            "Active__c" : true, 
+            "Name": "Essential Packs"
+        }
+    ]
+}

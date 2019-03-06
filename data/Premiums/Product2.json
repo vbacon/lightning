@@ -1,0 +1,314 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Bose_Headphones"
+            },
+            "Name": "Bose Headphones",
+            "ACD_Name__c": "Bose_Headphones",
+            "Type__c": "Electronics",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc19001-331.jpg",
+            "Tagline__c": "Listen to NPR On the Go!",
+            "One_Time_Price__c": 200,
+            "Sustainer_Price__c": 20,
+            "Live_On_Web__c": true,
+            "Available_to_Ship_Date__c": "2018-03-26",
+            "Cost__c": 100,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef1"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Expensive_Earthquake_Kit"
+            },
+            "Name": "Expensive Earthquake Kit",
+            "ACD_Name__c": "Expensive_Earthquake_Kit",
+            "Type__c": "Safety",
+            "Sub_Type__c": "Emergency Kit",
+            "Image_URL__c": "https://gocampbellriver.com/wp-content/uploads/2015/05/St-John-ambulance-emergency-survival-kit-for-earth-quake-preparedness-200x200.jpg",
+            "Tagline__c": "Supplies for two people",
+            "One_Time_Price__c": 200,
+            "Sustainer_Price__c": 20,
+            "Live_On_Web__c": true,
+            "Available_to_Ship_Date__c": "2018-03-26",
+            "Cost__c": 50,
+            "Vendor__c": "@AccountRef2",
+            "Distributor__c": "@AccountRef2",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef2"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Bocelli_CD_DVD_Combo"
+            },
+            "Name": "Bocelli CD/DVD Combo",
+            "ACD_Name__c": "Bocelli_CD_DVD_Combo",
+            "Type__c": "Audio",
+            "Sub_Type__c": "CD",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc19257-331.jpg",
+            "Tagline__c": "Live in Concert",
+            "One_Time_Price__c": 200,
+            "Sustainer_Price__c": 20,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Roku2"
+            },
+            "Name": "Roku 2 Streaming Player",
+            "ACD_Name__c": "Roku2_Passport",
+            "Type__c": "Electronics",
+            "Image_URL__c": "https://u.s.kqed.net/2017/10/27/19212331.gif",
+            "Tagline__c": "Includes PBS Passport",
+            "One_Time_Price__c": 120,
+            "Sustainer_Price__c": 12,
+            "Live_On_Web__c": true,
+            "Available_to_Ship_Date__c": "2018-03-26",
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef3"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Cheap_Earthquake_Kit"
+            },
+            "Name": "Cheap Earthquake Kit",
+            "ACD_Name__c": "Cheap_Earthquake_Kit",
+            "Type__c": "Safety",
+            "Sub_Type__c": "Emergency Kit",
+            "Image_URL__c": "http://www.whatcausesearthquakes.com/wp-content/uploads/2016/12/first-kit-aid.jpg",
+            "Tagline__c": "Supplies for one person",
+            "One_Time_Price__c": 50,
+            "Sustainer_Price__c": 5,
+            "Live_On_Web__c": true,
+            "Available_to_Ship_Date__c": "2018-03-26",
+            "Cost__c": 50,
+            "Vendor__c": "@AccountRef2",
+            "Distributor__c": "@AccountRef2",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef4"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "suze_book_1"
+            },
+            "Name": "Suze Orman: How to Make Lots of Money",
+            "ACD_Name__c": "suze_book_1",
+            "Type__c": "Book",
+            "Sub_Type__c": "Hardcover",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/psofsx-331.jpg",
+            "Tagline__c": "Suze Will Make You Rich!",
+            "One_Time_Price__c": 50,
+            "Sustainer_Price__c": 5,
+            "Live_On_Web__c": true,
+            "Available_to_Ship_Date__c": "2018-03-26",
+            "Cost__c": 3,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef5"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Bocelli_CD"
+            },
+            "Name": "Bocelli CD",
+            "ACD_Name__c": "Bocelli_CD",
+            "Type__c": "Audio",
+            "Sub_Type__c": "CD",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc19255-331.jpg",
+            "Tagline__c": "Prerecorded tracks",
+            "One_Time_Price__c": 50,
+            "Sustainer_Price__c": 5,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Workout_Bundle"
+            },
+            "Name": "Workout Bundle",
+            "ACD_Name__c": "Workout_Bundle",
+            "Type__c": "Outdoor",
+            "Image_URL__c": "http://u.s.kqed.net/2016/06/16/PC18293331.jpg",
+            "Tagline__c": "Water Bottle, Gym Bag and Towel",
+            "One_Time_Price__c": 80,
+            "Sustainer_Price__c": 8,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef6"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Ed_Slott_Combo"
+            },
+            "Name": "Retire Safe and Secure with Ed Slott",
+            "ACD_Name__c": "Ed_Slott_Combo",
+            "Type__c": "Video",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc19463-331.jpg",
+            "Tagline__c": "Media Combo",
+            "One_Time_Price__c": 120,
+            "Sustainer_Price__c": 12,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Doo_Wop_Generations"
+            },
+            "Name": "Doo Wop Generations",
+            "ACD_Name__c": "Doo_Wop_Generations",
+            "Type__c": "Video",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc19446-331.jpg",
+            "Tagline__c": "3 dvd + 6 cd set",
+            "One_Time_Price__c": 210,
+            "Sustainer_Price__c": 21,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef7"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Johnny_Mathis_1"
+            },
+            "Name": "Johnny Mathis - Wonderful, Wonderful",
+            "ACD_Name__c": "Johnny_Mathis_1",
+            "Type__c": "Video",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc18940-331.jpg",
+            "Tagline__c": "DVD + 60th Anniversary Collection 4 CD Set",
+            "One_Time_Price__c": 150,
+            "Sustainer_Price__c": 15,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Joel_Furman_1"
+            },
+            "Name": "3 Steps to Incredible Health with Joel Furhman, MD",
+            "ACD_Name__c": "Joel_Furman_1",
+            "Type__c": "Video",
+            "Image_URL__c": "https://www.kqed.org/assets/img/pledge/pc19466-331.jpg",
+            "Tagline__c": "DVD + Cookbook Combo",
+            "One_Time_Price__c": 150,
+            "Sustainer_Price__c": 15,
+            "Live_On_Web__c": true,
+            "Cost__c": 10,
+            "Vendor__c": "@AccountRef1",
+            "Distributor__c": "@AccountRef1",
+            "Product_Schedules__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Product_Schedule__c",
+                            "referenceId": "ProductScheduleRef8"
+                        },
+                        "Quarter__c": 3,
+                        "Fiscal_Year__c": 2019
+                    }
+                ]
+            }
+        }
+    ]
+}

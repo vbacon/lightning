@@ -1,0 +1,28 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Forest",
+            "ShippingStreet": "123 Main St",
+            "ShippingCity": "San Francisco",
+            "ShippingState": "CA",
+            "ShippingCountry": "94110",
+            "Product_Order_Template__c": "@ForestTemplate"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "Name": "Essential Packs",
+            "ShippingStreet": "775 Cochran St Suite F",
+            "ShippingCity": "Simi Valley",
+            "ShippingState": "CA",
+            "ShippingCountry": "93065",
+            "Product_Order_Template__c": "@EssentialTemplate"
+        }
+    ]
+}

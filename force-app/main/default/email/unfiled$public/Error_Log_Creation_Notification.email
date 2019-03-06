@@ -1,0 +1,14 @@
+Someone needs to review the recently created Error Log objects to see why an Error Log was created.
+
+Error Log ID: {!Error_Log__c.Id}
+Error Log Name: {!Error_Log__c.Name}
+Error Log Created Date: {!Error_Log__c.CreatedDate}
+
+Custom Fields
+
+Class Name: {!Error_Log__c.Class_Name__c}
+Custom Message: {!Error_Log__c.Custom_Message__c}
+Line Number: {!Error_Log__c.Line_Number__c}
+Message: {!Error_Log__c.Message__c}
+Stack Trace String: {!Error_Log__c.Stack_Trace_String__c}
+Type Name: {!Error_Log__c.Type_Name__c}

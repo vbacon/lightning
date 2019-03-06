@@ -1,0 +1,84 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl1"
+            },
+            "Member_Benefit__c": "@MemberCard",
+            "Member_Level__c": "@Basic"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl2"
+            },
+            "Member_Benefit__c": "@MemberCard",
+            "Member_Level__c": "@Partner"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl3"
+            },
+            "Member_Benefit__c": "@MemberCard",
+            "Member_Level__c": "@LeadershipCircle"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl4"
+            },
+            "Member_Benefit__c": "@MemberCard",
+            "Member_Level__c": "@MajorDonor"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl5"
+            },
+            "Member_Benefit__c": "@PledgeFreeStream",
+            "Member_Level__c": "@Partner"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl6"
+            },
+            "Member_Benefit__c": "@PledgeFreeStream",
+            "Member_Level__c": "@LeadershipCircle"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl7"
+            },
+            "Member_Benefit__c": "@PledgeFreeStream",
+            "Member_Level__c": "@MajorDonor"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl8"
+            },
+            "Member_Benefit__c": "@KQEDProgram",
+            "Member_Level__c": "@LeadershipCircle"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl9"
+            },
+            "Member_Benefit__c": "@KQEDProgram",
+            "Member_Level__c": "@MajorDonor"
+        },
+        {
+            "attributes": {
+                "type": "Member_Benefit_Level__c",
+                "referenceId": "mbl10"
+            },
+            "Member_Benefit__c": "@Passport",
+            "Member_Level__c": "@MajorDonor"
+        }
+    ]
+}

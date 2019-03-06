@@ -1,0 +1,124 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef2"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef1",
+            "Opportunity__c": "@OpportunityRef1",
+            "Capture_Sale_Transaction__c": "82923669705115222",
+            "Amount__c": -275,
+            "Post_Date__c": "2018-07-28",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef3"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef4",
+            "Opportunity__c": "@OpportunityRef2",
+            "Capture_Sale_Transaction__c": "82923669700116597",
+            "Amount__c": -75,
+            "Post_Date__c": "2018-07-01",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef5"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef6",
+            "Opportunity__c": "@OpportunityRef3",
+            "Capture_Sale_Transaction__c": "82923669701592549",
+            "Amount__c": -80,
+            "Post_Date__c": "2018-06-17",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef7"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef8",
+            "Opportunity__c": "@OpportunityRef4",
+            "Capture_Sale_Transaction__c": "82923669704212905",
+            "Amount__c": -99,
+            "Post_Date__c": "2018-12-25",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef9"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef10",
+            "Opportunity__c": "@OpportunityRef5",
+            "Capture_Sale_Transaction__c": "82923669700117926",
+            "Amount__c": -250,
+            "Post_Date__c": "2018-03-01",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef12"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef11",
+            "Opportunity__c": "@OpportunityRef6",
+            "Capture_Sale_Transaction__c": "82923669706179227",
+            "Amount__c": -75,
+            "Post_Date__c": "2018-04-05",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef13"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef14",
+            "Opportunity__c": "@OpportunityRef7",
+            "Capture_Sale_Transaction__c": "82923669697742058",
+            "Amount__c": -100,
+            "Post_Date__c": "2018-05-26",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef15"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef16",
+            "Opportunity__c": "@OpportunityRef8",
+            "Capture_Sale_Transaction__c": "82923669703066526",
+            "Amount__c": -500,
+            "Post_Date__c": "2018-06-10",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef18"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef17",
+            "Opportunity__c": "@OpportunityRef9",
+            "Capture_Sale_Transaction__c": "82923669701591400",
+            "Amount__c": -40,
+            "Post_Date__c": "2018-01-10",
+            "Status__c": "Refunded"
+        },
+        {
+            "attributes": {
+                "type": "Payment__c",
+                "referenceId": "Payment__cRef20"
+            },
+            "Original_Payment_Id__c": "@Payment__cRef19",
+            "Opportunity__c": "@OpportunityRef10",
+            "Capture_Sale_Transaction__c": "82923669705113672",
+            "Amount__c": -150,
+            "Post_Date__c": "2018-07-21",
+            "Status__c": "Refunded"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_on_Web</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND((Live_On_Web__c = true), OR( ISBLANK(ACD_Name__c),ISBLANK(Vendor__c),ISBLANK(Distributor__c),ISBLANK(Image_URL__c),ISBLANK(One_Time_Price__c),ISBLANK(Sustainer_Price__c)) )</errorConditionFormula>
+    <errorDisplayField>Live_On_Web__c</errorDisplayField>
+    <errorMessage>Fields required for live-on-web: ACD Name, Vendor, Distributor, Image URL, One Time / Sustainer Price</errorMessage>
+</ValidationRule>

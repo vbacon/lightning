@@ -1,0 +1,25 @@
+.THIS [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux::after{
+    content: none !important;
+    /* important here should be okay because css
+    of a lightning component is already limited to
+    the component itself */
+}
+
+.THIS .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux:hover, 
+.THIS .slds-checkbox_toggle [type=checkbox]:checked:focus+.slds-checkbox_faux_container .slds-checkbox_faux{
+    background-color: rgb(145, 146, 151) !important;
+}
+
+.THIS .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux{
+    background-color: rgb(171, 173, 176) !important;
+    border-color: rgb(171, 173, 176) !important;
+}
+
+.THIS .slds-checkbox_toggle [type=checkbox]:checked:focus+.slds-checkbox_faux_container .slds-checkbox_faux{
+    border-color: rgb(21, 137, 238) !important;
+}
+
+.THIS .slds-form-element__label {
+    font-family: Arial;
+    font-size: 14px;
+}

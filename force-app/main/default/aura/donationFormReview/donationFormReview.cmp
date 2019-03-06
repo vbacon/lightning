@@ -1,0 +1,188 @@
+<aura:component>
+
+    <aura:attribute type="Contact" name="theContact" />
+    <aura:attribute type="Opportunity" name="theDonation" />
+    <aura:attribute type="Map" name="thePM" />
+    <aura:attribute type="Id" name="theSelectedProductId"/>
+    <aura:attribute type="Product2" name="theSelectedProduct"/>
+    <aura:attribute type="Boolean" name="isProductSelected"/>
+    <aura:attribute type="Map" name="theShippingAddressModel" default="{}"/>    
+    <aura:attribute type="String" name="cardNumberString" access="private"/>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:registerEvent name="donationFormCheckoutEvent" type="c:donationFormCheckoutEvent"/>
+    
+    <aura:method name="cancelButton_Test" action="{!c.cancelButton}"/>
+    <aura:method name="saveButton_Test" action="{!c.saveButton}"/>
+
+    <div>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick="{!c.cancelButton}" title="Close">
+                <lightning:icon iconName="utility:close" variant="inverse"/>
+                <span class="slds-assistive-text">Close</span>
+              </button>
+              <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Review Your Donation</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p class="slds-text-body_regular slds-p-bottom_small">Please review your donation data.
+                  Hit 'Cancel' to return to the main form and make changes as needed.  Hit 'Submit Donation'
+                  if all of the information is correct.</p>
+                
+                <div class="slds-box">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">Donation</p>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_12-of-12">
+                            <span class="slds-text-body_regular"><b>Amount: </b>
+                                <lightning:formattedNumber value="{!v.theDonation.Initial_Payment_Amount__c}" style="currency" currencyCode="USD" />
+                                <aura:if isTrue="{!v.theDonation.Is_Monthly__c}">                            
+                                    <span class="slds-text-body_regular"> / Monthly</span>                                 
+                                </aura:if>
+                                <aura:if isTrue="{!!v.theDonation.Is_Monthly__c}">                            
+                                    <span class="slds-text-body_regular"> / One-Time Donation</span>                                 
+                                </aura:if>                            
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-box">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">Contact Information</p>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>First Name: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.FirstName}</span>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Last Name: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.LastName}</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Email: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.Email}</span>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Phone: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.Phone}</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="slds-box">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">Payment Information</p>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Payment Type: </b></span>
+                            <span class="slds-text-body_regular">{!v.thePM.payType}</span>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Card Number: </b></span>
+                            <span class="slds-text-body_regular">{!v.cardNumberString}</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Card Type: </b></span>
+                            <span class="slds-text-body_regular">{!v.thePM.cardType}</span>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Exp. Month / Year: </b></span>
+                            <span class="slds-text-body_regular">{!v.thePM.cardExpMonth}/{!v.thePM.cardExpYear}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-box">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">Billing Address</p>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Street: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.MailingStreet}</span>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>City: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.MailingCity}</span>
+                        </div>
+                    </div>
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>State: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.MailingState}</span>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <span class="slds-text-body_regular"><b>Zip Code: </b></span>
+                            <span class="slds-text-body_regular">{!v.theContact.MailingPostalCode}</span>
+                        </div>
+                    </div>
+                </div>
+                <aura:if isTrue="{!v.isProductSelected}">                            
+                    <div class="slds-box">
+                        <p class="slds-text-heading_medium slds-p-bottom_small">Shipping Address</p>
+                        <aura:if isTrue="{!v.theShippingAddressModel.useCustomShippingAddress}">                            
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_6-of-12">
+                                    <span class="slds-text-body_regular"><b>Street: </b></span>
+                                    <span class="slds-text-body_regular">{!v.theShippingAddressModel.street}</span>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <span class="slds-text-body_regular"><b>City: </b></span>
+                                    <span class="slds-text-body_regular">{!v.theShippingAddressModel.city}</span>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_6-of-12">
+                                    <span class="slds-text-body_regular"><b>State: </b></span>
+                                    <span class="slds-text-body_regular">{!v.theShippingAddressModel.state}</span>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12">
+                                    <span class="slds-text-body_regular"><b>Zip Code: </b></span>
+                                    <span class="slds-text-body_regular">{!v.theShippingAddressModel.postalCode}</span>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.theShippingAddressModel.useCustomShippingAddress}">
+                            <p>Same as Billing Address </p>
+                        </aura:if>
+                    </div>
+                </aura:if>
+                <div class="slds-box">
+                    <p class="slds-text-heading_medium slds-p-bottom_small">Gift Information</p>
+                    <aura:if isTrue="{!v.isProductSelected}">                            
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_12-of-12">
+                                <span class="slds-text-body_regular"><b>Product Name: </b></span>
+                                <span class="slds-text-body_regular">{!v.theSelectedProduct.Name}<br /></span>
+                            </div>
+                        </div>    
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_4-of-12">
+                                <img src="{!v.theSelectedProduct.Image_URL__c}" width="200" />                                            
+                            </div>
+                            <div class="slds-col slds-size_8-of-12">
+                                <span class="slds-text-body_regular"><br />{!v.theSelectedProduct.Tagline__c}</span>
+                            </div>
+                        </div>
+                        <div class="slds-grid">
+                             <div class="slds-col slds-size_12-of-12">
+                                 <br /><i>Your gift should arrive in 4-6 weeks.</i>
+                             </div>
+                        </div>     
+                        </aura:if>
+                    <aura:if isTrue="{!!v.isProductSelected}">
+                        <p>No Gift Selected</p>
+                    </aura:if>
+                </div>
+                
+                <p class="slds-text-body_regular slds-p-top_small">Thank you for your donation to KQED!</p>
+            </div>  <!-- Modal Content -->
+            
+            <footer class="slds-modal__footer">
+              <button class="slds-button slds-button_neutral" onclick="{!c.cancelButton}">Cancel</button>
+              <button class="slds-button slds-button_brand" onclick="{!c.saveButton}">Submit Donation</button>
+            </footer>
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+      </div>
+
+</aura:component>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_Required</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR( AND( NOT( Is_Limited__c) , NOT( ISNULL(Quantity__c) ) ), AND( Is_Limited__c ,  ISNULL(Quantity__c) ) )</errorConditionFormula>
+    <errorMessage>Quantity cannot be null if the product is limited</errorMessage>
+</ValidationRule>
